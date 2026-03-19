@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz Tiếng Anh 10 – Giữa HKII</title>
+<title>Quiz Tiếng Anh 10 – Giữa HKII</title> 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
@@ -692,10 +692,11 @@ let questions = [], qIdx = 0, answers = [], selectedMode = 'all';
 const LABELS = ['A','B','C','D'];
 const MODE_NAMES = {
   'all': 'Tổng hợp',
-  'reading1-p1': 'P1: Gender',
-  'reading1-p2': 'P2: Vietnam',
-  'reading1-p3': 'P3: Brain',
+  'reading1-p1': 'P1',
+  'reading1-p2': 'P2',
+  'reading1-p3': 'P3',
   'reading2': 'Reading 2',
+  'language-knowledge-2': 'Language 2',
   'sentence-building': 'Writing'
 };
 
@@ -1244,7 +1245,7 @@ function initModes() {
   // Generate mode cards
   QUIZ_DATA.modes.forEach((mode, idx) => {
     const card = document.createElement('div');
-    card.className = 'mode-card' + (idx === 1 ? ' selected' : '');
+    card.className = 'mode-card' + (idx === 0 ? ' selected' : '');
     card.dataset.mode = mode.id;
     
     card.innerHTML = `
